@@ -92,7 +92,7 @@ app.post("/api/persons", (request, response, next) => {
     .catch((error) => next(error));
 });
 
-app.put("/api/persons/:id", (request, response) => {
+app.put("/api/persons/:id", (request, response, next) => {
   const { name, number } = request.body;
   const id = request.params.id;
 
